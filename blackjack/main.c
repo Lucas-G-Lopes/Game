@@ -113,7 +113,7 @@ int play(void) {
   // shuff the cards
   shuff(cards);
 
-  // Distribuição das cartas
+  // Distribuiçao das cartas
   pcards[0] = cards[0];
   pcards[1] = cards[1];
   bcards[0] = cards[2];
@@ -180,7 +180,7 @@ int play(void) {
 
       if (pcards[i + 2] % 100 == 1) {
         printf(
-            "Decida o valor de A para sua carta de número %d, insira 'y' para 11 ou 'n' para 1:\n",
+            "Decida o valor de A para sua carta de numero %d, insira 'y' para 11 ou 'n' para 1:\n",
             i + 3);
         do {
           d = getchar();
@@ -241,11 +241,11 @@ int play(void) {
     printf("Soma do valor das cartas da banca: %d\n\n", bsum);
   }
 
-  // Se a banca decidirá receber outra carta até que bsum > 16
+  // Se a banca decidira receber outra carta ate que bsum > 16
   // i = 0;
   for (i = 0; i < 3 && bsum < 17; i++) {
     bcards[i + 2] = cards[i + 7];
-    printf("A carta da banca de número %d e:\n", i + 3);
+    printf("A carta da banca de numero %d e:\n", i + 3);
     pic(bcards[i + 2]);
 
     if (bcards[i + 2] % 100 == 1) {
@@ -269,9 +269,9 @@ int play(void) {
     return 1;
   }
 
-  // Decisão
+  // Decisao
   if (bsum > 21 || psum > bsum) {
-    printf("Você venceu!\n");
+    printf("Voce venceu!\n");
     return 0;
   } else if (psum == bsum) {
     printf("Empate!\n");
